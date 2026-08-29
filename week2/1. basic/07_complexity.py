@@ -34,7 +34,12 @@ def find_duplicates_brute_force(nums):
     # TODO: 이중 반복문으로 중복 찾기
     ## i번째 원소와 i+1 이후의 모든 원소를 비교
     ## 같은 원소를 찾으면 duplicates에 추가 (중복 추가 방지 필요)
-    pass
+    
+    for i in range(n):
+        for j in range(i+1, n):
+            if nums[i] == nums[j]:
+                if nums[i] not in duplicates:
+                    duplicates.append(nums[i])
     
     return duplicates
 
@@ -48,13 +53,20 @@ def find_duplicates_sorting(nums):
         return []
     
     # TODO: 배열을 정렬하세요 (nums.sort() 사용)
-    pass
     
+    nums.sort()
+
+    n = len(nums)
+
     duplicates = []
     
     # TODO: 인접한 원소를 비교하여 중복 찾기
     # i와 i+1 원소가 같고, duplicates에 없으면 추가
-    pass
+    
+    for i in range(n-1):
+        if nums[i] == nums[i+1]:
+            if nums[i] not in duplicates:
+                duplicates.append(nums[i])
     
     return duplicates
 
@@ -66,11 +78,18 @@ def find_duplicates_hash(nums):
     """
     seen = set()
     duplicates = set()
+
+    n = len(nums)
     
     # TODO: 각 원소를 순회하면서
     ## 이미 seen에 있으면 duplicates에 추가
     ## 없으면 seen에 추가
-    pass
+    
+    for i in range(n):
+        if nums[i] in seen:
+            duplicates.add(nums[i])
+        else:
+           seen.add(nums[i])
     
     return list(duplicates)
 
