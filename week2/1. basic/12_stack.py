@@ -46,9 +46,11 @@ def is_valid_parentheses(s):
     for i in range(len(s)):
         if s[i] == '(':
             stack.append(s[i])
-        if len(stack) != 0:
+        if len(stack) != 0: #스택이 비어있지 않으면
             if s[i] == ')':
                 stack.pop()
+        else:
+            return False
     
     # TODO: 반복이 끝나면 스택이 비어있는지 확인
     
