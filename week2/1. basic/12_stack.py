@@ -3,7 +3,7 @@
 
 문제 설명:
 - 스택(Stack)을 사용하여 괄호가 올바르게 짝지어져 있는지 확인합니다.
-- LIFO (Last In First Out) 구조를 활용합니다.
+- LIFO (Last In First Out, 후입선출) 구조를 활용합니다. 
 
 입력:
 - s: 괄호 문자열 (예: "(())", "(()")
@@ -42,10 +42,20 @@ def is_valid_parentheses(s):
     ## : 닫는 괄호 ')'면
     ## 스택이 비어있으면 False 반환
     ## 아니면 스택에서 pop
-    pass
+    
+    for i in range(len(s)):
+        if s[i] == '(':
+            stack.append(s[i])
+        if len(stack) != 0:
+            if s[i] == ')':
+                stack.pop()
     
     # TODO: 반복이 끝나면 스택이 비어있는지 확인
-    pass
+    
+    if len(stack) == 0:
+        return True
+    else:
+        return False
 
 # 테스트 케이스
 if __name__ == "__main__":
