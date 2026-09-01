@@ -21,7 +21,7 @@
 
 힌트:
 - 유클리드 호제법: gcd(a, b) = gcd(b, a % b)
-- LCM 공식: lcm(a, b) = (a × b) / gcd(a, b)
+- LCM 공식: lcm(a, b) = (a * b) / gcd(a, b)
 """
 
 import math
@@ -176,4 +176,4 @@ if __name__ == "__main__":
         result = "소수" if is_prime(num) else "합성수"
         print(f"{num}: {result}")
 
-
+# 재귀를 타고 올라오면서 매 단계마다 나의 (a, b) 기준 계수로 변환

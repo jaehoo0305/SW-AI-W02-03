@@ -103,4 +103,5 @@ if __name__ == "__main__":
     score2 = find_student_score(students1, search_name2)
     print(f"{search_name2}의 점수: {score2}")
 
-
+# 딕셔너리.keys() - 키만 반환
+# 딕셔너리.values() - 값만 반환

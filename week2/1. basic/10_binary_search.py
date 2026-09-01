@@ -81,3 +81,5 @@ if __name__ == "__main__":
     print(f"배열: {arr3}")
     print(f"찾는 값: {target3}")
     print(f"결과: 인덱스 {result3}")
+
+# 그냥 늘 보던 이분 탐색 알고리즘

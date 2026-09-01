@@ -67,4 +67,6 @@ if __name__ == "__main__":
     result2 = process_print_queue(jobs2)
     print(f"처리 완료: {result2}")
 
+# deque(리스트) - 큐를 구현
 
+# 선입선출

@@ -109,4 +109,4 @@ if __name__ == "__main__":
     result3 = bubble_sort(arr3.copy())
     print(f"정렬 후: {result3}")
 
-
+# 인접 원소 비교 및 교환 - 두 원소를 비교하여 큰 값을 뒤로 이동시키는 과정

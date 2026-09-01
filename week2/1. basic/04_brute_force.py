@@ -81,4 +81,4 @@ if __name__ == "__main__":
     print(f"목표 합: {target3}")
     print(f"결과 쌍: {result3}")
 
-
+# 이중 반복문으로 모든 쌍을 확인하는 완전 탐색 방식

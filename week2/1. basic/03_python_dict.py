@@ -61,7 +61,7 @@ def find_above_average_students(students):
 
     for i in range(l):
         total += scores[i]
-        average = total / l
+    average = total / l
 
     # average = total/len(dict)
     
@@ -105,4 +105,4 @@ if __name__ == "__main__":
     print(f"평균 점수: {avg}")
     print(f"평균 이상 학생: {students}")
 
-
+# 딕셔너리리스트[인덱스][키 or 값] - 딕셔너리리스트에서 특정 인덱스의 딕셔너리에서 키 또는 값에 접근
