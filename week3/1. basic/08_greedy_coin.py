@@ -42,12 +42,27 @@ def make_change_greedy(change, coins):
     """
     result = {}
     total_coins = 0
+    coins.sort(reverse=True)
     
     # TODO: 각 동전에 대해 반복
     ## 현재 동전으로 거슬러줄 수 있는 개수 계산    
     ## 개수가 0보다 크면 결과에 추가
-    pass
-    
+
+    for i in range(len(coins)):
+        j = 0
+        while True:
+            if coins[i]*j == change:
+                result[coins[i]]= j
+                return sum(result.values()), result
+            elif coins[i]*j > change:
+                change -= coins[i]*(j-1)
+                if (j-1) != 0:
+                    result[coins[i]]= j-1
+                break
+            j += 1
+
+    total_coins = sum(result.values())
+
     return total_coins, result
 
 # 테스트 케이스
@@ -86,5 +101,3 @@ if __name__ == "__main__":
     for coin, count in details.items():
         print(f"{coin}원: {count}개")
     print(f"총 {total}개")
-
-
