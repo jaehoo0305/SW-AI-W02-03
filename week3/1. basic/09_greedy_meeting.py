@@ -76,5 +76,3 @@ if __name__ == "__main__":
     print(f"전체 회의: {len(meetings2)}개")
     print(f"배정된 회의 개수: {count2}개")
     print(f"선택된 회의: {selected2}")
-
-
